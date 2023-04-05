@@ -68,6 +68,7 @@ def write_model_metadata(model_path, module, updates):
 
       save_file(tensors, model_path, metadata)
       print(f"[MetadataEditor] Model saved: {model_path}")
+      write_metadata_to_info(model_path,metadata)
 
 
 def get_model_list(module, model, model_dir, sort_by):

@@ -149,7 +149,7 @@ def get_model_rating(filename):
     return 0
 
   metadata = safetensors_hack.read_metadata(filename)
-  return int(metadata.get("ssmd_rating", "0"))
+  return float(metadata.get("ssmd_rating", "0"))
 
 
 def has_user_metadata(filename):

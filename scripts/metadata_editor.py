@@ -231,7 +231,8 @@ Reads metadata from the model on disk and updates all Gradio components
   source = metadata.get("ssmd_source", "")
   keywords = metadata.get("ssmd_keywords", "")
   description = metadata.get("ssmd_description", "")
-  rating = int(metadata.get("ssmd_rating", "0"))
+  # ranting float instead
+  rating = float(metadata.get("ssmd_rating", "0"))
   tags = metadata.get("ssmd_tags", "")
   model_hash = metadata.get("sshs_model_hash", model_util.cache("hashes").get(model_path, {}).get("model", ""))
   legacy_hash = metadata.get("sshs_legacy_hash", model_util.cache("hashes").get(model_path, {}).get("legacy", ""))
